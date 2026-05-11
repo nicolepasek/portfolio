@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics Dashboard — Nicole Pasek</title>
+  <link rel="stylesheet" href="styles.css?v=13" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-name">Nicole Pasek</span>
+        <span class="nav-role">Product Designer</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="mailto:hello@example.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="case-study">
+    <div class="case-grid">
+
+      <aside class="case-sidebar">
+        <a href="index.html" class="case-back">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/>
+          </svg>
+          Back
+        </a>
+        <nav class="section-nav">
+          <button data-target="overview">Overview</button>
+          <button data-target="problem">Problem</button>
+          <button data-target="research">Research</button>
+          <button data-target="solution">Solution</button>
+          <button data-target="outcome">Outcome</button>
+        </nav>
+      </aside>
+
+      <main class="case-content">
+
+        <div class="case-header">
+          <p class="case-label">Just Eat Takeaway · Shipped 2023</p>
+          <h1>Analytics Dashboard</h1>
+        </div>
+
+        <div class="case-hero">
+          <img src="images/thumb-3.svg" alt="Analytics Dashboard" />
+        </div>
+
+        <div class="case-meta">
+          <div class="meta-col">
+            <h4>Role</h4>
+            <p>Product Designer</p>
+          </div>
+          <div class="meta-col">
+            <h4>Timeline</h4>
+            <p>Apr – Jul 2023</p>
+          </div>
+          <div class="meta-col">
+            <h4>Platform</h4>
+            <p>Web (internal tooling)</p>
+          </div>
+          <div class="meta-col">
+            <h4>Skills</h4>
+            <p>UI Design</p>
+            <p>Data Visualisation</p>
+            <p>Information Architecture</p>
+          </div>
+        </div>
+
+        <section class="case-section" id="overview">
+          <p class="case-section-label">Overview</p>
+          <h2>A data-dense dashboard designed for clarity — surfacing signal without overwhelming operators.</h2>
+          <p>Operations teams at Just Eat Takeaway needed a single view across courier performance, order health, and regional SLAs. The existing tooling was a patchwork of exported spreadsheets and third-party BI tools with no shared language. This project created a unified internal dashboard that brought the most critical metrics together.</p>
+          <div class="case-cols">
+            <div class="case-col">
+              <h3>Hierarchy</h3>
+              <p>Surface what needs attention now, before everything else.</p>
+            </div>
+            <div class="case-col">
+              <h3>Density</h3>
+              <p>Power users need a lot of data on one screen without it feeling overwhelming.</p>
+            </div>
+            <div class="case-col">
+              <h3>Speed</h3>
+              <p>Decisions happen in real time — the dashboard must load and update fast.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="problem">
+          <p class="case-section-label">Problem</p>
+          <h2>Ops teams were making decisions from stale, scattered data.</h2>
+          <p>Regional operations managers had no real-time view of their area. They relied on hourly email reports, manual exports, and phone calls to understand live order and courier status. During peak periods this created delays and blind spots — the business couldn't respond quickly to incidents because nobody had a shared, live picture.</p>
+        </section>
+
+        <section class="case-section" id="research">
+          <p class="case-section-label">Research</p>
+          <h2>One week embedded with the ops team exposed what actually mattered.</h2>
+          <p>Rather than starting with wireframes, I spent a week sitting with the regional ops team during live shifts — observing what they looked for, what they ignored, and what caused them to escalate. This gave me a prioritised list of the eight metrics that genuinely drove decisions, versus the dozens that were available but rarely consulted.</p>
+          <div class="case-cols">
+            <div class="case-col">
+              <h3>1 week embedded</h3>
+              <p>With the regional operations team during live peak shifts</p>
+            </div>
+            <div class="case-col">
+              <h3>8 key metrics</h3>
+              <p>Identified as genuinely decision-driving</p>
+            </div>
+            <div class="case-col">
+              <h3>4 persona types</h3>
+              <p>From regional manager to incident responder</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="solution">
+          <p class="case-section-label">Solution</p>
+          <h2>A KPI-forward layout with progressive disclosure for deeper investigation.</h2>
+          <p>The top of the dashboard showed eight KPI tiles — each with a current value, trend indicator, and threshold alert. Below, users could drill into any metric through expandable chart panels. A persistent alert rail on the right surfaced anomalies that required action, so operators could see at a glance if anything needed immediate attention.</p>
+          <div class="case-section-img">
+            <img src="images/thumb-3.svg" alt="Analytics dashboard layout" />
+          </div>
+          <p>The information architecture was designed so that a manager checking in during a commute and an incident responder deep in a live crisis could both use the same interface effectively.</p>
+        </section>
+
+        <section class="case-section" id="outcome">
+          <p class="case-section-label">Outcome</p>
+          <h2>Mean time to incident detection dropped by 22 minutes.</h2>
+          <p>The dashboard was adopted by 94% of eligible ops users within the first month. Post-launch interviews consistently cited the alert rail as the highest-value feature. The project became the foundation for a wider internal tooling redesign that followed.</p>
+        </section>
+
+        <div class="project-nav">
+          <a href="project-2.html">← Mobile Checkout Redesign</a>
+          <a href="project-4.html">Next: Onboarding Flow →</a>
+        </div>
+
+      </main>
+
+      <div></div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-credit">Designed by Nicole</span>
+      <div class="footer-links">
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:hello@example.com">Email</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.case-section');
+    const buttons = document.querySelectorAll('.section-nav button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById(btn.dataset.target).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          buttons.forEach(b => b.classList.remove('active'));
+          const btn = document.querySelector(`.section-nav button[data-target="${entry.target.id}"]`);
+          if (btn) btn.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-10% 0px -60% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m http.server 8080)",
+      "Bash(echo \"Server PID: $!\")",
+      "Bash(curl -s http://localhost:8080/index.html)",
+      "Bash(curl *)",
+      "WebFetch(domain:www.rachelchen.tech)",
+      "Bash(python3 *)",
+      "Bash(pkill -f \"python3 -m http.server 8080\")",
+      "Bash(lsof -ti:8080)",
+      "Bash(xargs kill *)",
+      "Bash(grep -v \"^.*:.*{$\")",
+      "Bash(grep -oP '--\\(?:font|color|foreground\\)[^:;,\\)]*:[^;,\\)]+')",
+      "Bash(grep -oP '<[^>]*\\(class=\"[^\"]*\"\\)[^>]*>[^<]{0,100}')"
+    ]
+  }
+}

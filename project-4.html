@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onboarding Flow — Nicole Pasek</title>
+  <link rel="stylesheet" href="styles.css?v=13" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-name">Nicole Pasek</span>
+        <span class="nav-role">Product Designer</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="mailto:hello@example.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="case-study">
+    <div class="case-grid">
+
+      <aside class="case-sidebar">
+        <a href="index.html" class="case-back">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/>
+          </svg>
+          Back
+        </a>
+        <nav class="section-nav">
+          <button data-target="overview">Overview</button>
+          <button data-target="problem">Problem</button>
+          <button data-target="research">Research</button>
+          <button data-target="solution">Solution</button>
+          <button data-target="outcome">Outcome</button>
+        </nav>
+      </aside>
+
+      <main class="case-content">
+
+        <div class="case-header">
+          <p class="case-label">Just Eat Takeaway · Shipped 2022</p>
+          <h1>Onboarding Flow</h1>
+        </div>
+
+        <div class="case-hero">
+          <img src="images/thumb-4.svg" alt="Onboarding Flow" />
+        </div>
+
+        <div class="case-meta">
+          <div class="meta-col">
+            <h4>Role</h4>
+            <p>Product Designer</p>
+          </div>
+          <div class="meta-col">
+            <h4>Timeline</h4>
+            <p>Mar – Jun 2022</p>
+          </div>
+          <div class="meta-col">
+            <h4>Platform</h4>
+            <p>Mobile (iOS / Android)</p>
+          </div>
+          <div class="meta-col">
+            <h4>Skills</h4>
+            <p>Product Design</p>
+            <p>Behavioural Design</p>
+            <p>Prototyping</p>
+          </div>
+        </div>
+
+        <section class="case-section" id="overview">
+          <p class="case-section-label">Overview</p>
+          <h2>Designing a first-run experience that activates new users without overwhelming them.</h2>
+          <p>A user's first session is the highest-leverage moment in the product lifecycle. This project redesigned the new user onboarding flow — from sign-up through to first completed order — with the goal of increasing activation rate and reducing time-to-first-order.</p>
+          <div class="case-cols">
+            <div class="case-col">
+              <h3>Activate fast</h3>
+              <p>Get users to their first order as quickly as possible.</p>
+            </div>
+            <div class="case-col">
+              <h3>Build confidence</h3>
+              <p>New users need to feel the product is reliable before committing.</p>
+            </div>
+            <div class="case-col">
+              <h3>Ask less, personalise more</h3>
+              <p>Collect preferences progressively rather than upfront.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="problem">
+          <p class="case-section-label">Problem</p>
+          <h2>New users were dropping off before placing their first order.</h2>
+          <p>The previous onboarding required users to complete a lengthy setup flow — including address, dietary preferences, and payment — before they could browse restaurants. Many users abandoned before reaching the home screen. Those who made it through had a high first-session order rate, but the top-of-funnel loss was significant.</p>
+          <p>The core tension: the product needed certain data to work well, but asking for it all upfront was killing activation.</p>
+        </section>
+
+        <section class="case-section" id="research">
+          <p class="case-section-label">Research</p>
+          <h2>Competitive analysis and drop-off data told two different stories.</h2>
+          <p>Competitor benchmarking showed that leading delivery apps had moved to address-first onboarding — getting users to browse before asking anything else. Our own data confirmed the same pattern: users who reached the restaurant list within the first 60 seconds had a 3× higher first-order rate than those who took longer.</p>
+          <div class="case-cols">
+            <div class="case-col">
+              <h3>6 competitor apps</h3>
+              <p>Benchmarked for onboarding patterns and friction points</p>
+            </div>
+            <div class="case-col">
+              <h3>60-second threshold</h3>
+              <p>Users reaching the restaurant list within 60s converted at 3× the rate</p>
+            </div>
+            <div class="case-col">
+              <h3>42% drop-off</h3>
+              <p>On the preferences step before the home screen</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="solution">
+          <p class="case-section-label">Solution</p>
+          <h2>Address-first onboarding with progressive preference collection.</h2>
+          <p>The new flow asked for only one thing upfront: a delivery address. This immediately unlocked the restaurant browse experience. Dietary preferences were collected inline during the first order — surfaced as a natural part of the ordering flow rather than a setup chore. Payment was deferred entirely to checkout.</p>
+          <div class="case-section-img">
+            <img src="images/thumb-4.svg" alt="Onboarding flow screens" />
+          </div>
+          <p>The three-screen sequence — address, brief value proposition, restaurant list — was validated in prototype testing with 12 new users before being built.</p>
+        </section>
+
+        <section class="case-section" id="outcome">
+          <p class="case-section-label">Outcome</p>
+          <h2>First-order activation increased by 18% in the month after launch.</h2>
+          <p>The redesigned flow reduced median time-to-restaurant-list from 2 minutes 40 seconds to under 45 seconds. The drop-off on the preferences step was effectively eliminated. The progressive preference collection approach was later adopted across other setup flows in the app.</p>
+        </section>
+
+        <div class="project-nav">
+          <a href="project-3.html">← Analytics Dashboard</a>
+          <a href="project-5.html">Next: Design System →</a>
+        </div>
+
+      </main>
+
+      <div></div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-credit">Designed by Nicole</span>
+      <div class="footer-links">
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:hello@example.com">Email</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.case-section');
+    const buttons = document.querySelectorAll('.section-nav button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById(btn.dataset.target).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          buttons.forEach(b => b.classList.remove('active'));
+          const btn = document.querySelector(`.section-nav button[data-target="${entry.target.id}"]`);
+          if (btn) btn.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-10% 0px -60% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>

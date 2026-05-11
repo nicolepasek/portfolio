@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Style Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Colours */
+      --bg:        #f5f3ef;
+      --surface:   #edeae5;
+      --border:    #d8d5cf;
+      --text:      #111111;
+      --muted:     #7a7670;
+      --inverse-bg: #111111;
+      --inverse-text: #f5f3ef;
+
+      /* Type */
+      --font: 'Inter', system-ui, sans-serif;
+
+      /* Spacing */
+      --sp-1: 0.25rem;
+      --sp-2: 0.5rem;
+      --sp-3: 1rem;
+      --sp-4: 1.5rem;
+      --sp-5: 2rem;
+      --sp-6: 3rem;
+      --sp-8: 5rem;
+    }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.5; }
+
+    /* Layout */
+    .page { max-width: 900px; margin: 0 auto; padding: 5rem 3rem 8rem; }
+
+    .sg-header {
+      padding-bottom: 3rem;
+      margin-bottom: 4rem;
+      border-bottom: 2px solid var(--text);
+    }
+
+    .sg-header h1 {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .sg-header p {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .sg-section {
+      margin-bottom: 5rem;
+    }
+
+    .sg-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Colour ── */
+    .colour-row {
+      display: flex;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .swatch {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .swatch-block {
+      height: 100px;
+    }
+
+    .swatch-info {
+      padding: 0.75rem;
+      background: var(--bg);
+    }
+
+    .swatch-name {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.15rem;
+    }
+
+    .swatch-value {
+      display: block;
+      font-size: 0.68rem;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── Type ── */
+    .type-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .type-specimen {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 2rem;
+      align-items: baseline;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .type-specimen:last-child {
+      border-bottom: none;
+    }
+
+    .type-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .type-role {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .type-spec {
+      font-size: 0.68rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .t-display {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .t-h1 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+    }
+
+    .t-h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.2;
+    }
+
+    .t-body {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .t-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .t-small {
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── Spacing ── */
+    .spacing-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 2rem;
+    }
+
+    .spacing-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .spacing-block {
+      background: var(--text);
+      width: 1px;
+    }
+
+    .spacing-label {
+      font-size: 0.65rem;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── Components ── */
+    .component-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    /* Project list item */
+    .demo-list-item {
+      display: grid;
+      grid-template-columns: 3rem 1fr auto;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .demo-list-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .demo-num {
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .demo-meta { display: flex; flex-direction: column; gap: 0.25rem; }
+
+    .demo-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .demo-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .demo-tags {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 0.35rem;
+    }
+
+    .demo-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .demo-arrow {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Nav */
+    .demo-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2rem;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      margin-bottom: 2rem;
+    }
+
+    .demo-nav-logo {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .demo-nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .demo-nav-links li {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* Hero */
+    .demo-hero {
+      padding: 4rem 2rem 3rem;
+      border: 1px solid var(--border);
+      border-top: none;
+      background: var(--bg);
+      margin-bottom: 2rem;
+    }
+
+    .demo-hero-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .demo-hero-h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+
+    .demo-hero-h1 em {
+      font-style: normal;
+      font-weight: 300;
+      color: var(--muted);
+    }
+
+    /* Button */
+    .demo-buttons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .btn-primary {
+      background: var(--text);
+      color: var(--inverse-text);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      padding: 0.7rem 1.5rem;
+      border: 1px solid var(--border);
+      cursor: pointer;
+    }
+
+    /* ── Tokens summary ── */
+    .tokens-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+    }
+
+    .tokens-table th {
+      text-align: left;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0.6rem 1rem 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tokens-table td {
+      padding: 0.65rem 1rem 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: middle;
+    }
+
+    .tokens-table td:last-child {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .token-swatch-inline {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border: 1px solid var(--border);
+      vertical-align: middle;
+      margin-right: 0.5rem;
+    }
+
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="sg-header">
+    <h1>Style Guide</h1>
+    <p>Portfolio — Minimal Bold Direction · April 2026</p>
+  </div>
+
+  <!-- Colours -->
+  <section class="sg-section">
+    <p class="sg-label">Colour</p>
+    <div class="colour-row">
+      <div class="swatch">
+        <div class="swatch-block" style="background:#f5f3ef;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Background</span>
+          <span class="swatch-value">#f5f3ef</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#edeae5;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Surface</span>
+          <span class="swatch-value">#edeae5</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#d8d5cf;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Border</span>
+          <span class="swatch-value">#d8d5cf</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#7a7670;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Muted</span>
+          <span class="swatch-value">#7a7670</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#111111;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Text</span>
+          <span class="swatch-value">#111111</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Typography -->
+  <section class="sg-section">
+    <p class="sg-label">Typography — Inter</p>
+    <div class="type-stack">
+
+      <div class="type-specimen">
+        <div class="type-meta">
+          <span class="type-role">Display</span>
+          <span class="type-spec">Inter 900<br>clamp(2.8–4.5rem)<br>ls −0.03em · lh 1</span>
+        </div>
+        <span class="t-display">Portfolio</span>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">
+          <span class="type-role">Heading 1</span>
+          <span class="type-spec">Inter 700<br>clamp(1.8–2.8rem)<br>ls −0.025em · lh 1.1</span>
+        </div>
+        <span class="t-h1">Designing thoughtful experiences</span>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">
+          <span class="type-role">Heading 2</span>
+          <span class="type-spec">Inter 600<br>1.2rem<br>ls −0.015em · lh 1.2</span>
+        </div>
+        <span class="t-h2">Selected Work</span>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">
+          <span class="type-role">Body</span>
+          <span class="type-spec">Inter 300<br>0.95rem<br>lh 1.8 · colour: muted</span>
+        </div>
+        <span class="t-body">Redesigning the substitution flow for couriers to reduce friction at the point of delivery. When an item is unavailable, couriers need a fast, clear path.</span>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">
+          <span class="type-role">Label</span>
+          <span class="type-spec">Inter 500<br>0.7rem · caps<br>ls 0.12em</span>
+        </div>
+        <span class="t-label">Product Design</span>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-meta">
+          <span class="type-role">Small</span>
+          <span class="type-spec">Inter 400<br>0.78rem<br>lh 1.6 · colour: muted</span>
+        </div>
+        <span class="t-small">UX Design · Mobile · Logistics</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Spacing -->
+  <section class="sg-section">
+    <p class="sg-label">Spacing Scale (base 4px)</p>
+    <div class="spacing-row">
+      <div class="spacing-item">
+        <div class="spacing-block" style="height:4px; width:4px; background: var(--text);"></div>
+        <span class="spacing-label">4px</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-block" style="height:8px; width:8px; background: var(--text);"></div>
+        <span class="spacing-label">8px</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-block" style="height:16px; width:16px; background: var(--text);"></div>
+        <span class="spacing-label">16px</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-block" style="height:24px; width:24px; background: var(--text);"></div>
+        <span class="spacing-label">24px</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-block" style="height:32px; width:32px; background: var(--text);"></div>
+        <span class="spacing-label">32px</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-block" style="height:48px; width:48px; background: var(--text);"></div>
+        <span class="spacing-label">48px</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-block" style="height:80px; width:80px; background: var(--text);"></div>
+        <span class="spacing-label">80px</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Components -->
+  <section class="sg-section">
+    <p class="sg-label">Components</p>
+
+    <!-- Nav -->
+    <div class="demo-nav">
+      <span class="demo-nav-logo">NP</span>
+      <ul class="demo-nav-links">
+        <li>Work</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+
+    <!-- Hero -->
+    <div class="demo-hero">
+      <p class="demo-hero-label">Product Design</p>
+      <h1 class="demo-hero-h1">Designing<br><em>thoughtful</em><br>experiences</h1>
+    </div>
+
+    <!-- Project list -->
+    <div class="component-row">
+      <div class="demo-list-item">
+        <span class="demo-num">01</span>
+        <div class="demo-meta">
+          <span class="demo-title">Courier Item Substitutions</span>
+          <span class="demo-desc">Redesigning the substitution flow to reduce friction at delivery.</span>
+          <div class="demo-tags">
+            <span class="demo-tag">UX Design</span>
+            <span class="demo-tag">Mobile</span>
+            <span class="demo-tag">Logistics</span>
+          </div>
+        </div>
+        <span class="demo-arrow">↗</span>
+      </div>
+      <div class="demo-list-item">
+        <span class="demo-num">02</span>
+        <div class="demo-meta">
+          <span class="demo-title">Mobile Checkout Redesign</span>
+          <span class="demo-desc">Streamlining end-to-end checkout to improve mobile conversion.</span>
+          <div class="demo-tags">
+            <span class="demo-tag">UX Design</span>
+            <span class="demo-tag">Mobile</span>
+          </div>
+        </div>
+        <span class="demo-arrow">↗</span>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="demo-buttons">
+      <button class="btn-primary">View project</button>
+      <button class="btn-ghost">Get in touch</button>
+    </div>
+
+  </section>
+
+  <!-- Token reference -->
+  <section class="sg-section">
+    <p class="sg-label">Token Reference</p>
+    <table class="tokens-table">
+      <thead>
+        <tr>
+          <th>Token</th>
+          <th>Role</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="token-swatch-inline" style="background:#f5f3ef;"></span>bg</td>
+          <td>Page background</td>
+          <td>#f5f3ef</td>
+        </tr>
+        <tr>
+          <td><span class="token-swatch-inline" style="background:#edeae5;"></span>surface</td>
+          <td>Card / elevated surface</td>
+          <td>#edeae5</td>
+        </tr>
+        <tr>
+          <td><span class="token-swatch-inline" style="background:#d8d5cf;"></span>border</td>
+          <td>Dividers, outlines</td>
+          <td>#d8d5cf</td>
+        </tr>
+        <tr>
+          <td><span class="token-swatch-inline" style="background:#7a7670;"></span>muted</td>
+          <td>Secondary text, icons</td>
+          <td>#7a7670</td>
+        </tr>
+        <tr>
+          <td><span class="token-swatch-inline" style="background:#111111; border-color:#111111;"></span>text</td>
+          <td>Primary text, interactive</td>
+          <td>#111111</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td>Font family</td>
+          <td>Inter</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td>Display weight</td>
+          <td>900 (Black)</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td>Heading weight</td>
+          <td>700 (Bold)</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td>Body weight</td>
+          <td>300 (Light)</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td>Spacing base</td>
+          <td>4px</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td>Page margin</td>
+          <td>48px (desktop) · 24px (mobile)</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td>Max content width</td>
+          <td>960px</td>
+        </tr>
+        <tr>
+          <td>—</td>
+          <td>Border radius</td>
+          <td>0 (sharp)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,878 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #fafcfd;
+  --surface: #f2f4f5;
+  --border: rgba(17, 17, 17, 0.1);
+  --text: #111111;
+  --muted: rgba(17, 17, 17, 0.5);
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+}
+
+h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.75rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+h3 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.325rem;
+  letter-spacing: -0.02em;
+}
+
+h4, p {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+h4 {
+  font-family: 'Geist Mono', monospace;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+p {
+  font-family: 'Geist', system-ui, sans-serif;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* ── Nav ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+}
+
+.nav-inner {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* backward compat: old nav structure on project/about pages */
+nav > a.nav-logo,
+nav > .nav-logo {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding: 1.25rem 1.5rem;
+  display: block;
+}
+
+nav > ul.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 1.25rem 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+nav > ul.nav-links li a {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+nav > ul.nav-links li a:hover {
+  color: var(--text);
+}
+
+/* new nav structure */
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.nav-name {
+  font-family: 'Geist Mono', monospace;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.nav-role {
+  font-family: 'Geist Mono', monospace;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a,
+.nav-links li a {
+  font-family: 'Geist Mono', monospace;
+  font-size: 15px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links li a:hover {
+  color: var(--text);
+}
+
+/* ── Hero ── */
+.hero {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hero h1 {
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.hero h1 em {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.hero-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-self: end;
+}
+
+.exp-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.exp-year {
+  font-family: 'Geist Mono', monospace;
+  font-size: 15px;
+  font-weight: 500;
+  min-width: 3.5rem;
+  width: 3.5rem;
+  flex-shrink: 0;
+  color: var(--text);
+}
+
+.exp-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.exp-company {
+  font-family: 'Geist Mono', monospace;
+  font-size: 15px;
+  color: var(--text);
+  display: block;
+}
+
+.exp-role {
+  font-family: 'Geist Mono', monospace;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* ── Work Grid ── */
+.work {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.work-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-card {
+  display: block;
+  cursor: pointer;
+}
+
+.card-thumb {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.card-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .card-overlay {
+  opacity: 0.4;
+}
+
+.project-card:hover .card-thumb img {
+  transform: scale(1.02);
+}
+
+.card-info {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.card-title {
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.card-company {
+  font-family: 'Geist Mono', monospace;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+/* ── Case Study Layout ── */
+.case-study {
+  padding: 0 1.5rem;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.case-sidebar {
+  padding: 3rem 0 2rem;
+}
+
+.case-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 15px;
+  color: var(--text);
+  transition: opacity 0.2s;
+}
+
+.case-back:hover {
+  opacity: 0.7;
+}
+
+.case-back svg {
+  flex-shrink: 0;
+}
+
+.section-nav {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.section-nav button {
+  font-family: 'Geist Mono', monospace;
+  font-size: 15px;
+  color: var(--text);
+  opacity: 0.5;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  transition: opacity 0.2s;
+}
+
+.section-nav button:hover,
+.section-nav button.active {
+  opacity: 1;
+}
+
+.case-content {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.case-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.case-label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.case-header h1 {
+  font-weight: 400;
+}
+
+.case-hero {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.case-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.case-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.meta-col h4 {
+  margin-bottom: 0.125rem;
+}
+
+.meta-col p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.case-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.case-section-label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.case-section h2 {
+  font-weight: 400;
+}
+
+.case-section h3 {
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.case-section p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.case-section-img {
+  width: 100%;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  background: var(--surface);
+  margin-top: 0.5rem;
+}
+
+.case-section-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.case-cols {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.case-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .case-meta {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .case-cols {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .case-grid {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+  }
+
+  .case-sidebar {
+    position: sticky;
+    top: 0;
+    height: fit-content;
+  }
+
+  .section-nav {
+    display: flex;
+  }
+
+  .case-content {
+    max-width: 48rem;
+    gap: 6rem;
+  }
+}
+
+/* ── Project Page (legacy) ── */
+.project-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 3rem;
+  transition: color 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.back-link:hover {
+  color: var(--text);
+}
+
+.project-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-header h1 {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  min-width: 200px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.meta-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.meta-value {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.project-description {
+  max-width: 680px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.embed-container {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.embed-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.embed-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--muted);
+}
+
+.embed-placeholder .placeholder-icon {
+  font-size: 2rem;
+  opacity: 0.3;
+}
+
+.embed-placeholder p {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+}
+
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-top: 2rem;
+}
+
+.project-nav a {
+  font-family: 'Geist Mono', monospace;
+  font-size: 15px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.project-nav a:hover {
+  color: var(--text);
+}
+
+/* ── About ── */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.about-intro h1 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.hero-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.about-bio {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.1rem;
+  transition: border-color 0.2s;
+}
+
+.about-cta:hover {
+  border-color: var(--text);
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.about-list-primary {
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.about-list-secondary {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.about-list-link {
+  font-size: 0.85rem;
+  color: var(--muted);
+  transition: color 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.about-list-link:hover {
+  color: var(--text);
+}
+
+.card-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.25rem 1.5rem;
+  margin-top: 3rem;
+}
+
+.footer-inner {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.footer-credit {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  align-items: center;
+}
+
+.footer-links a {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+/* old footer p tags */
+footer > p {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ── Responsive ── */
+@media (min-width: 640px) {
+  .nav-brand {
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding-top: 26vh;
+    padding-bottom: 2rem;
+  }
+
+  .hero-experience {
+    gap: 0.25rem;
+  }
+
+  .exp-details {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .exp-company {
+    min-width: 14rem;
+    width: 14rem;
+  }
+
+  .work {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .project-header {
+    grid-template-columns: 1fr;
+  }
+
+  .project-meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .project-page {
+    padding: 1.5rem;
+  }
+}

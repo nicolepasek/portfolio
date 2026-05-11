@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Checkout Redesign — Nicole Pasek</title>
+  <link rel="stylesheet" href="styles.css?v=13" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-name">Nicole Pasek</span>
+        <span class="nav-role">Product Designer</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="mailto:hello@example.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="case-study">
+    <div class="case-grid">
+
+      <aside class="case-sidebar">
+        <a href="index.html" class="case-back">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/>
+          </svg>
+          Back
+        </a>
+        <nav class="section-nav">
+          <button data-target="overview">Overview</button>
+          <button data-target="problem">Problem</button>
+          <button data-target="research">Research</button>
+          <button data-target="solution">Solution</button>
+          <button data-target="outcome">Outcome</button>
+        </nav>
+      </aside>
+
+      <main class="case-content">
+
+        <div class="case-header">
+          <p class="case-label">Just Eat Takeaway · Shipped 2024</p>
+          <h1>Mobile Checkout Redesign</h1>
+        </div>
+
+        <div class="case-hero">
+          <img src="images/thumb-2.svg" alt="Mobile Checkout Redesign" />
+        </div>
+
+        <div class="case-meta">
+          <div class="meta-col">
+            <h4>Role</h4>
+            <p>Product Designer</p>
+          </div>
+          <div class="meta-col">
+            <h4>Timeline</h4>
+            <p>Jun – Sep 2024</p>
+          </div>
+          <div class="meta-col">
+            <h4>Platform</h4>
+            <p>Mobile (iOS / Android)</p>
+          </div>
+          <div class="meta-col">
+            <h4>Skills</h4>
+            <p>UX Design</p>
+            <p>Conversion Optimisation</p>
+            <p>A/B Testing</p>
+          </div>
+        </div>
+
+        <section class="case-section" id="overview">
+          <p class="case-section-label">Overview</p>
+          <h2>Streamlining the end-to-end checkout experience to improve conversion on mobile.</h2>
+          <p>The checkout flow is the most critical path in the product. Every unnecessary step, unclear label, or moment of hesitation is a potential drop-off. This project audited and redesigned the full checkout journey — from bag review to order confirmation — with a focus on speed and confidence.</p>
+          <div class="case-cols">
+            <div class="case-col">
+              <h3>Reduce steps</h3>
+              <p>Fewer screens between bag and order placed.</p>
+            </div>
+            <div class="case-col">
+              <h3>Surface trust signals</h3>
+              <p>Make payment and address entry feel safe and familiar.</p>
+            </div>
+            <div class="case-col">
+              <h3>Handle errors gracefully</h3>
+              <p>Recover from failures without losing the whole order.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="problem">
+          <p class="case-section-label">Problem</p>
+          <h2>Checkout abandonment was highest on mobile, and growing.</h2>
+          <p>Analytics showed that over 30% of users who reached checkout did not complete their order on mobile — significantly higher than web. Exit surveys and session recordings pointed to three causes: confusion around delivery address entry, fees surfacing too late, and a payment flow that felt unfamiliar on native platforms.</p>
+          <p>The existing design had been patched incrementally for years and lacked cohesion. Different screens used different patterns for the same interactions.</p>
+        </section>
+
+        <section class="case-section" id="research">
+          <p class="case-section-label">Research</p>
+          <h2>Session recordings and usability testing pinpointed the exact moments of failure.</h2>
+          <p>I ran five moderated usability sessions with regular customers across different devices and OS versions. Combined with quantitative data, I mapped a clear drop-off funnel — with the address confirmation screen and the payment summary being the two biggest friction points.</p>
+          <div class="case-cols">
+            <div class="case-col">
+              <h3>5 usability sessions</h3>
+              <p>Moderated, across iOS and Android users</p>
+            </div>
+            <div class="case-col">
+              <h3>2 critical drop-off points</h3>
+              <p>Address confirmation and payment summary</p>
+            </div>
+            <div class="case-col">
+              <h3>30%+ abandonment</h3>
+              <p>On mobile vs. 18% on web at time of audit</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="solution">
+          <p class="case-section-label">Solution</p>
+          <h2>A consolidated three-step checkout with fees visible from the start.</h2>
+          <p>The redesign collapsed the previous six-screen flow into three: bag review, delivery details, and payment. Fees were surfaced immediately — no surprises at the payment step. Address entry adopted a map-confirmation pattern familiar from competitor apps, and payment used the platform's native sheet to leverage existing trust.</p>
+          <div class="case-section-img">
+            <img src="images/thumb-2.svg" alt="Checkout redesign screens" />
+          </div>
+          <p>I ran two rounds of prototype testing before handoff, validating the new flow reduced time-to-order-placed by an average of 40 seconds.</p>
+        </section>
+
+        <section class="case-section" id="outcome">
+          <p class="case-section-label">Outcome</p>
+          <h2>Mobile checkout conversion increased by 7 percentage points post-launch.</h2>
+          <p>The redesign shipped in phases with an A/B test running for four weeks across the UK market. The new flow outperformed the control on conversion rate, time-to-complete, and post-order satisfaction. It was rolled out globally over the following quarter.</p>
+        </section>
+
+        <div class="project-nav">
+          <a href="project-1.html">← Courier Item Substitutions</a>
+          <a href="project-3.html">Next: Analytics Dashboard →</a>
+        </div>
+
+      </main>
+
+      <div></div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-credit">Designed by Nicole</span>
+      <div class="footer-links">
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:hello@example.com">Email</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.case-section');
+    const buttons = document.querySelectorAll('.section-nav button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById(btn.dataset.target).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          buttons.forEach(b => b.classList.remove('active'));
+          const btn = document.querySelector(`.section-nav button[data-target="${entry.target.id}"]`);
+          if (btn) btn.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-10% 0px -60% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
