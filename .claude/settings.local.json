@@ -12,7 +12,13 @@
       "Bash(xargs kill *)",
       "Bash(grep -v \"^.*:.*{$\")",
       "Bash(grep -oP '--\\(?:font|color|foreground\\)[^:;,\\)]*:[^;,\\)]+')",
-      "Bash(grep -oP '<[^>]*\\(class=\"[^\"]*\"\\)[^>]*>[^<]{0,100}')"
+      "Bash(grep -oP '<[^>]*\\(class=\"[^\"]*\"\\)[^>]*>[^<]{0,100}')",
+      "Bash(mv /Users/nicolepasek/Desktop/portfolio/Substitutions.mov /Users/nicolepasek/Desktop/portfolio/images/Substitutions.mov)",
+      "Bash(mv /Users/nicolepasek/Desktop/portfolio/Checkout.mov /Users/nicolepasek/Desktop/portfolio/images/Checkout.mov)",
+      "Bash(mv /Users/nicolepasek/Desktop/portfolio/Shopping.mov /Users/nicolepasek/Desktop/portfolio/images/Shopping.mov)",
+      "Bash(sed -n '262,300p' /Users/nicolepasek/Desktop/portfolio/styles.css)",
+      "Bash(sed -n '400,480p' /Users/nicolepasek/Desktop/portfolio/styles.css)",
+      "Bash(sips -g pixelWidth -g pixelHeight \"/Users/nicolepasek/Desktop/portfolio/images/Shopping - Overview Large Image.png\")"
     ]
   }
 }

@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Courier Item Substitutions — Nicole Pasek</title>
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <title>Shop+Pay: Substitutions — Nicole Pasek</title>
+  <link rel="stylesheet" href="styles.css?v=14" />
+
 </head>
 <body>
 
@@ -17,7 +18,7 @@
       <div class="nav-links">
         <a href="index.html#work">Work</a>
         <a href="about.html">About</a>
-        <a href="mailto:hello@example.com">Contact</a>
+
       </div>
     </div>
   </nav>
@@ -36,109 +37,209 @@
           <button data-target="overview">Overview</button>
           <button data-target="problem">Problem</button>
           <button data-target="research">Research</button>
+          <button data-target="process">The Process</button>
+          <button data-target="challenge">Challenge</button>
           <button data-target="solution">Solution</button>
-          <button data-target="outcome">Outcome</button>
+          <button data-target="flow">The Experience</button>
+          <button data-target="results">Results</button>
+          <button data-target="reflection">Reflection</button>
         </nav>
       </aside>
 
       <main class="case-content">
 
         <div class="case-header">
-          <p class="case-label">Just Eat Takeaway · Shipped 2023</p>
-          <h1>Courier Item Substitutions</h1>
+          <p class="case-label">SkipTheDishes · Shipped 2025</p>
+          <h1>Shop+Pay: Substitutions</h1>
         </div>
 
         <div class="case-hero">
-          <img src="images/thumb-1.svg" alt="Courier Item Substitutions" />
+          <video src="images/Substitutions/Subs%20Title%20Page.mov?v=6" autoplay loop muted playsinline></video>
         </div>
 
-        <div class="case-meta">
-          <div class="meta-col">
-            <h4>Role</h4>
-            <p>Product Designer</p>
-          </div>
-          <div class="meta-col">
-            <h4>Timeline</h4>
-            <p>Jan – Mar 2023</p>
-          </div>
-          <div class="meta-col">
-            <h4>Platform</h4>
-            <p>Mobile (iOS / Android)</p>
-          </div>
-          <div class="meta-col">
-            <h4>Skills</h4>
-            <p>UX Design</p>
-            <p>Prototyping</p>
-            <p>User Research</p>
-          </div>
-        </div>
 
         <section class="case-section" id="overview">
           <p class="case-section-label">Overview</p>
-          <h2>Reducing friction for couriers when items are unavailable.</h2>
-          <p>When a customer orders an item that turns out to be out of stock, the courier is put in a difficult position at the point of delivery. This project focused on redesigning the substitution flow to give couriers a clear, fast path forward — minimising cognitive load during a time-pressured task.</p>
-          <div class="case-cols">
-            <div class="case-col">
-              <h3>Speed</h3>
-              <p>Couriers need to resolve substitutions in seconds, not minutes.</p>
-            </div>
-            <div class="case-col">
-              <h3>Clarity</h3>
-              <p>The interface had to be scannable under stress and with gloves on.</p>
-            </div>
-            <div class="case-col">
-              <h3>Trust</h3>
-              <p>Couriers need confidence that their choice is protected and logged.</p>
-            </div>
+          <h2>Three options at checkout — giving customers the right amount of control, without adding friction.</h2>
+          <p>Grocery shopping is personal. The brand you buy, the ripeness you prefer, the things you'd never swap. When we built Shop+Pay, out-of-stock items were inevitable. Substitutions gave customers a moment at checkout to decide how they want to handle it — with best match selected by default, so most customers don't have to do anything at all.</p>
+          <div class="case-section-img" style="width:65%;">
+            <img src="images/Substitutions/Substitution%20Experience%20-%20Overview%20Image.png?v=6" alt="Substitution Experience Overview" />
           </div>
         </section>
 
         <section class="case-section" id="problem">
           <p class="case-section-label">Problem</p>
-          <h2>Couriers were abandoning deliveries due to substitution confusion.</h2>
-          <p>The existing flow presented substitution choices through a generic list with no visual hierarchy. Couriers working in noisy, time-pressured environments reported it as one of the most stressful parts of the job. Drop-off abandonment rates were measurably higher on orders containing substitutable items.</p>
-          <p>Couriers also had no way to communicate their choice to the customer in the moment — the only recourse was to call, adding further delay.</p>
+          <h2>12% of items were going out of stock with no structured way for customers to handle it.</h2>
+          <p>Before Substitutions launched, 12% of items in Shop+Pay orders were going out of stock with no structured way to resolve it. Couriers were left making judgment calls, customers were caught off guard, and the experience felt unpredictable. For a product built around trust — handing off your grocery list to a stranger — unpredictability was a problem we couldn't leave unsolved.</p>
         </section>
 
         <section class="case-section" id="research">
           <p class="case-section-label">Research</p>
-          <h2>Ride-alongs revealed where the flow broke down.</h2>
-          <p>I joined couriers on delivery shifts to observe the substitution flow in real conditions. The key insight: couriers weren't reading item descriptions — they were pattern-matching on images and price. The existing UI forced them to read when they needed to scan.</p>
-          <div class="case-cols">
-            <div class="case-col">
-              <h3>8 couriers</h3>
-              <p>Shadowed across urban and suburban routes</p>
+          <h2>Customers wanted control — and they were willing to take a moment upfront to get it.</h2>
+          <p>Grocery shopping carries a level of personal preference that restaurant orders simply don't. To design the right solution, we needed to understand how much control customers actually wanted — and whether they'd use it.</p>
+          <p>We conducted moderated interviews to understand how customers thought about item substitutions — what felt acceptable, what felt intrusive, and where they wanted to be involved. Those findings were then validated at scale through surveys, ensuring the themes we heard in interviews weren't outliers. Finally, we brought the proposed options back to couriers to confirm the experience would work for both sides of the transaction — the choices customers make have a direct impact on how couriers do their job.</p>
+
+          <div style="margin-top:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+            <div>
+              <p style="font-size:21px;font-weight:600;color:var(--text);margin-bottom:0.5rem;">45% of customers preferred to set substitution preferences at checkout rather than deal with it mid-order.</p>
             </div>
-            <div class="case-col">
-              <h3>3 failure modes</h3>
-              <p>Identified in the existing substitution flow</p>
-            </div>
-            <div class="case-col">
-              <h3>12% drop rate</h3>
-              <p>On deliveries requiring substitution</p>
+            <div>
+              <p style="font-size:21px;font-weight:600;color:var(--text);margin-bottom:0.5rem;">Set it and forget it — customers said the ability to set preferences upfront made the overall experience feel less anxious.</p>
             </div>
           </div>
+
+          <div style="margin-top:2.5rem;">
+            <p>Four themes emerged consistently across every conversation:</p>
+            <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:1rem;">
+              <div style="display:grid;grid-template-columns:140px 1fr;gap:1rem;">
+                <p style="font-weight:600;color:var(--text);">Control</p>
+                <p>Customers wanted to make the call themselves — not leave it to chance.</p>
+              </div>
+              <div style="display:grid;grid-template-columns:140px 1fr;gap:1rem;">
+                <p style="font-weight:600;color:var(--text);">Transparency</p>
+                <p>They wanted to know what was happening with their order, not be surprised after the fact.</p>
+              </div>
+              <div style="display:grid;grid-template-columns:140px 1fr;gap:1rem;">
+                <p style="font-weight:600;color:var(--text);">Choice</p>
+                <p>Different customers wanted different levels of involvement — the experience needed to support all of them.</p>
+              </div>
+              <div style="display:grid;grid-template-columns:140px 1fr;gap:1rem;">
+                <p style="font-weight:600;color:var(--text);">Ease</p>
+                <p>Whatever the solution, it couldn't feel like extra work.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="process">
+          <p class="case-section-label">Getting Organized</p>
+          <h2>The Process</h2>
+        </section>
+
+        <section class="case-section" id="challenge">
+          <p class="case-section-label">Challenge</p>
+          <h2>A decision at checkout about a problem that may never happen.</h2>
+          <p>The substitution moment sits at an uncomfortable intersection — customers are being asked at checkout to think through what happens if an item goes out of stock during a shop that hasn't started yet. Ask for too much and it feels overwhelming. Ask for too little and customers feel out of control when something does go wrong. The experience had to feel light and optional while still giving customers who wanted it a meaningful way to set their preferences.</p>
+          <blockquote class="case-quote">"I don't want to grocery shop twice"</blockquote>
         </section>
 
         <section class="case-section" id="solution">
           <p class="case-section-label">Solution</p>
-          <h2>A scan-first interface that leads with visuals and defaults to safe choices.</h2>
-          <p>The redesigned flow surfaced the suggested substitution prominently with a large product image, a clear price difference indicator, and a single-tap accept. Declining required a deliberate second step — reducing accidental refusals.</p>
-          <div class="case-section-img">
-            <img src="images/thumb-1.svg" alt="Substitution flow screens" />
+          <h2>Three options at checkout. Best match by default.</h2>
+          <p>At checkout, customers see a substitution preference attached to each item in their cart. The selection is optional — best match is pre-selected so customers who don't want to engage don't have to.</p>
+          <div class="case-cols">
+            <div class="case-col">
+              <p style="color:var(--text);"><strong>Best match</strong> <span style="opacity:0.5;font-weight:400;">(default)</span></p>
+              <p>The courier sends the customer real-time substitution suggestions while shopping. The customer approves or rejects each one before the item goes in the cart.</p>
+            </div>
+            <div class="case-col">
+              <p style="color:var(--text);"><strong>Choose a replacement now</strong></p>
+              <p>The customer picks a specific backup item at checkout. If their original is out of stock, the courier swaps it automatically — no interruption needed.</p>
+            </div>
+            <div class="case-col">
+              <p style="color:var(--text);"><strong>Refund</strong></p>
+              <p>If the item is out of stock, the customer is refunded. No replacement, no message — a clean resolution.</p>
+            </div>
           </div>
-          <p>The interface adapted to both portrait and landscape orientations for different courier device setups, and worked fully offline for areas with poor signal.</p>
         </section>
 
-        <section class="case-section" id="outcome">
-          <p class="case-section-label">Outcome</p>
-          <h2>Drop-off abandonment on substitution orders fell by 9%.</h2>
-          <p>After shipping to 100% of couriers, substitution-related support tickets dropped significantly. Courier satisfaction scores on the substitution task increased in the following quarter. The pattern established here was later adopted as the standard for all courier exception flows.</p>
+        <section class="case-section" id="flow">
+          <p class="case-section-label">The Experience</p>
+          <h2>Customer and courier screens reflect each other — what a customer chooses shapes exactly what the courier sees.</h2>
+
+          <h3 class="case-subsection-heading" style="margin-top:2.5rem;font-size:1.75rem;">Option 1: Best match</h3>
+
+          <h3 class="case-subsection-heading" style="margin-top:1rem;">Customer experience</h3>
+          <p>At checkout, best match is pre-selected on each cart item. Customers who want more control can tap to change it, but most will move on without a second thought. If an item goes out of stock during the shop, the customer receives a notification with options the courier has sent from the store. They approve or reject directly from the notification — no need to open the app.</p>
+          <div class="case-img-row">
+            <video src="images/Substitutions/Customer/Best%20Match/Customer%20Best%20Match%20(New).mov?v=7" autoplay loop muted playsinline></video>
+            <img src="images/Substitutions/Customer/Best%20Match/1%20Customer%20Best%20Match%20Cart.png?v=6" alt="Customer Best Match Cart" />
+            <img src="images/Substitutions/Customer/Best%20Match/2%20Customer%20Best%20Match%20Cart.png?v=6" alt="Customer Best Match Cart" />
+            <img src="images/Substitutions/Customer/Best%20Match/3%20Customer%20Best%20Match%20Cart.png?v=6" alt="Customer Best Match Cart" />
+          </div>
+
+          <h3 class="case-subsection-heading" style="margin-top:2rem;">Courier experience</h3>
+          <p>When a courier marks an item as out of stock, they see that the customer has best match selected. Previously, couriers had to manually search the store for alternatives themselves — a time-consuming process that contributed to a ~50% substitution rejection rate. Couriers were guessing, and customers were feeling it.</p>
+          <p>To address this, we're introducing AI-powered substitution recommendations directly into the picking flow. When an item goes out of stock, couriers receive a curated list of five smart suggestions — filtered by budget, inventory availability, dietary restrictions, and proximity in the store — so the right alternatives surface instantly, without the manual search.</p>
+          <ul style="margin:1rem 0 1rem 1.25rem;line-height:1.7;font-size:1.15rem;">
+            <li><strong>5 AI-generated suggestions</strong> per out-of-stock item</li>
+            <li><strong>Budget-aware and inventory-accurate</strong> filtering</li>
+            <li><strong>Dietary compliance and restricted item safety</strong> — no alcohol or cannabis substitutions</li>
+            <li><strong>Proximity-prioritized</strong> to keep picking fast</li>
+          </ul>
+          <p>The result: less guesswork for couriers, better suggestions for customers, and a direct path to improving the substitution acceptance rate and overall fill rate. This also lays the foundational AI infrastructure for future recommendation features across the Shop+Pay experience.</p>
+          <div class="case-img-row">
+            <video src="images/Substitutions/Courier/Best%20Match/Courier%20Best%20Match.mov?v=7" autoplay loop muted playsinline></video>
+            <img src="images/Substitutions/Courier/Best%20Match/Courier%20Subs/Pre%20Approved/1%20Shopping%20List.png?v=6" alt="Shopping List" />
+            <img src="images/Substitutions/Courier/Best%20Match/Courier%20Subs/Pre%20Approved/2%20Item%20Details.png?v=6" alt="Item Details" />
+            <img src="images/Substitutions/Courier/Best%20Match/Courier%20Subs/Pre%20Approved/3%20Find%20a%20Sub.png?v=6" alt="Find a Sub" />
+            <img src="images/Substitutions/Courier/Best%20Match/Courier%20Subs/Pre%20Approved/4%20Scan.png?v=6" alt="Scan" />
+            <img src="images/Substitutions/Courier/Best%20Match/Courier%20Subs/Pre%20Approved/5%20Shopping%20List.png?v=6" alt="Shopping List" />
+            <img src="images/Substitutions/Courier/Best%20Match/Courier%20Subs/Pre%20Approved/6%20Shopping%20List.png?v=6" alt="Shopping List" />
+          </div>
+
+          <h3 class="case-subsection-heading" style="margin-top:2rem;">During shop</h3>
+          <p>As the courier shops, the customer receives a push notification for each out-of-stock item. The notification surfaces the courier's suggested substitution and gives the customer a single tap to approve or reject — no need to open the app. If approved, the item goes straight into the cart. If rejected, the courier moves on without it.</p>
+          <div class="case-img-row">
+            <video src="images/Substitutions/Customer/Best%20Match/Notification/Customer%20Notification%20with%20Action.mov?v=7" autoplay loop muted playsinline></video>
+            <video src="images/Substitutions/Courier/Best%20Match/Courier%20Notification.mov?v=7" autoplay loop muted playsinline></video>
+          </div>
+
+          <h3 class="case-subsection-heading" style="margin-top:2.5rem;font-size:1.75rem;">Option 2: Choose a replacement now</h3>
+
+          <h3 class="case-subsection-heading" style="margin-top:1rem;">Customer experience</h3>
+          <p>At checkout, the customer taps the item and selects a specific replacement from the catalog. Their choice is saved to the order before the shop begins.</p>
+          <p>For customers who want full control, this option delivers exactly that. At checkout, they tap the item and select a specific replacement from the catalog — their choice is locked in before the shop begins. No notifications mid-order, no decisions under pressure, no surprises at the door.</p>
+          <p>This speaks directly to what research told us customers valued most: control, transparency, choice, and ease. The ability to pre-select a replacement is the purest expression of all four — the customer has made their decision on their own terms, in their own time, and the order carries it forward without any further input needed. Set it and forget it, exactly as they asked for.</p>
+          <div class="case-img-row">
+            <video src="images/Substitutions/Customer/Choose%20Replacement%20Now/Customer%20Choose%20Replacement%20Now.mov?v=7" autoplay loop muted playsinline></video>
+            <img src="images/Substitutions/Customer/Choose%20Replacement%20Now/1%20Cart.png?v=6" alt="Cart" />
+            <img src="images/Substitutions/Customer/Choose%20Replacement%20Now/2%20Item%20Details.png?v=6" alt="Item Details" />
+            <img src="images/Substitutions/Customer/Choose%20Replacement%20Now/3%20Item%20Details.png?v=6" alt="Item Details" />
+            <img src="images/Substitutions/Customer/Choose%20Replacement%20Now/4%20Item%20Details.png?v=6" alt="Item Details" />
+            <img src="images/Substitutions/Customer/Choose%20Replacement%20Now/5%20Item%20Details.png?v=6" alt="Item Details" />
+            <img src="images/Substitutions/Customer/Choose%20Replacement%20Now/6%20Item%20Details.png?v=6" alt="Item Details" />
+            <img src="images/Substitutions/Customer/Choose%20Replacement%20Now/7%20Item%20Details.png?v=6" alt="Item Details" />
+          </div>
+
+          <h3 class="case-subsection-heading" style="margin-top:2rem;">Courier experience</h3>
+          <p>If the original item is out of stock, the courier immediately sees the customer's pre-selected replacement. No message sent, no wait — they pick the replacement and continue shopping without interruption.</p>
+          <div class="case-img-row">
+            <video src="images/Substitutions/Courier/Choose%20Replacement%20Now/Courier%20Choose%20Replacement%20Now.mov?v=7" autoplay loop muted playsinline></video>
+            <img src="images/Substitutions/Courier/Choose%20Replacement%20Now/1%20Shopping%20List.png?v=6" alt="Shopping List" />
+            <img src="images/Substitutions/Courier/Choose%20Replacement%20Now/2%20Item%20Details.png?v=6" alt="Item Details" />
+            <img src="images/Substitutions/Courier/Choose%20Replacement%20Now/3%20customer%20preference_%20specific%20item.png?v=6" alt="Customer Preference" />
+            <img src="images/Substitutions/Courier/Choose%20Replacement%20Now/4%20Scan.png?v=6" alt="Scan" />
+            <img src="images/Substitutions/Courier/Choose%20Replacement%20Now/5%20Shopping%20List.png?v=6" alt="Shopping List" />
+            <img src="images/Substitutions/Courier/Choose%20Replacement%20Now/6%20Shopping%20List.png?v=6" alt="Shopping List" />
+          </div>
+        </section>
+
+        <section class="case-section" id="results">
+          <p class="case-section-label">Results</p>
+          <h2>Out-of-stock items dropped from 12% to 4% — a 67% reduction in unresolved stockouts.</h2>
+          <div class="case-cols">
+            <div class="case-col">
+              <h3>12% → 4%</h3>
+              <p>Out-of-stock rate after launch</p>
+            </div>
+            <div class="case-col">
+              <h3>67%</h3>
+              <p>Reduction in unresolved stockouts</p>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="case-section" id="reflection">
+          <p class="case-section-label">Reflection</p>
+          <h2>Pre-order decisions can dramatically improve in-order experience — but only when the upfront ask feels proportionate to the benefit.</h2>
+          <p>Getting that balance right was the core design challenge here. The best outcome was a feature most customers would barely notice — because the default did the work for them.</p>
         </section>
 
         <div class="project-nav">
           <span></span>
-          <a href="project-2.html">Next: Mobile Checkout Redesign →</a>
+          <a href="project-2.html">Next: Checkout & Pay →</a>
         </div>
 
       </main>
@@ -150,9 +251,9 @@
 
   <footer>
     <div class="footer-inner">
-      <span class="footer-credit">Designed by Nicole</span>
+      <span class="footer-credit">Designed by Nicole, built with the help of ClaudeCode</span>
       <div class="footer-links">
-        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/nicolepasek/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:hello@example.com">Email</a>
         <a href="about.html">About</a>
       </div>

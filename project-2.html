@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mobile Checkout Redesign — Nicole Pasek</title>
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <title>Shop+Pay: The Checkout Experience — Nicole Pasek</title>
+  <link rel="stylesheet" href="styles.css?v=14" />
+
 </head>
 <body>
 
@@ -17,7 +18,7 @@
       <div class="nav-links">
         <a href="index.html#work">Work</a>
         <a href="about.html">About</a>
-        <a href="mailto:hello@example.com">Contact</a>
+
       </div>
     </div>
   </nav>
@@ -35,110 +36,127 @@
         <nav class="section-nav">
           <button data-target="overview">Overview</button>
           <button data-target="problem">Problem</button>
-          <button data-target="research">Research</button>
-          <button data-target="solution">Solution</button>
-          <button data-target="outcome">Outcome</button>
+          <button data-target="solution">Regular Checkout</button>
+          <button data-target="challenge">Challenge</button>
+          <button data-target="pooled">Pooled Orders</button>
+          <button data-target="explorations">Explorations</button>
+          <button data-target="results">Results</button>
+          <button data-target="reflection">Reflection</button>
         </nav>
       </aside>
 
       <main class="case-content">
 
         <div class="case-header">
-          <p class="case-label">Just Eat Takeaway · Shipped 2024</p>
-          <h1>Mobile Checkout Redesign</h1>
+          <p class="case-label">SkipTheDishes · Shipped 2024</p>
+          <h1>Shop+Pay: The Checkout Experience</h1>
         </div>
 
         <div class="case-hero">
-          <img src="images/thumb-2.svg" alt="Mobile Checkout Redesign" />
+          <video src="images/Checkout/Checkout%20Title%20Page.mov?v=4" autoplay loop muted playsinline></video>
         </div>
 
-        <div class="case-meta">
-          <div class="meta-col">
-            <h4>Role</h4>
-            <p>Product Designer</p>
-          </div>
-          <div class="meta-col">
-            <h4>Timeline</h4>
-            <p>Jun – Sep 2024</p>
-          </div>
-          <div class="meta-col">
-            <h4>Platform</h4>
-            <p>Mobile (iOS / Android)</p>
-          </div>
-          <div class="meta-col">
-            <h4>Skills</h4>
-            <p>UX Design</p>
-            <p>Conversion Optimisation</p>
-            <p>A/B Testing</p>
-          </div>
-        </div>
 
         <section class="case-section" id="overview">
           <p class="case-section-label">Overview</p>
-          <h2>Streamlining the end-to-end checkout experience to improve conversion on mobile.</h2>
-          <p>The checkout flow is the most critical path in the product. Every unnecessary step, unclear label, or moment of hesitation is a potential drop-off. This project audited and redesigned the full checkout journey — from bag review to order confirmation — with a focus on speed and confidence.</p>
-          <div class="case-cols">
-            <div class="case-col">
-              <h3>Reduce steps</h3>
-              <p>Fewer screens between bag and order placed.</p>
-            </div>
-            <div class="case-col">
-              <h3>Surface trust signals</h3>
-              <p>Make payment and address entry feel safe and familiar.</p>
-            </div>
-            <div class="case-col">
-              <h3>Handle errors gracefully</h3>
-              <p>Recover from failures without losing the whole order.</p>
-            </div>
+          <h2>The checkout experience had to be the simplest thing in the courier's day.</h2>
+          <p>By the time a courier reaches the checkout, the hardest part should be done. But checkout introduced its own set of challenges — barcodes to scan, bags to account for, a Visa card to tap, and potentially multiple orders to pay for in sequence. All of this happening at a register, with a cashier waiting and a line forming behind them. The checkout experience had to be the simplest thing in the courier's day.</p>
+          <div class="case-section-img" style="width:65%;">
+            <img src="images/Checkout/Checkout%20Experience%20-%20Overview%20Large%20Image.png?v=2" alt="Checkout Experience Overview" />
           </div>
         </section>
 
         <section class="case-section" id="problem">
           <p class="case-section-label">Problem</p>
-          <h2>Checkout abandonment was highest on mobile, and growing.</h2>
-          <p>Analytics showed that over 30% of users who reached checkout did not complete their order on mobile — significantly higher than web. Exit surveys and session recordings pointed to three causes: confusion around delivery address entry, fees surfacing too late, and a payment flow that felt unfamiliar on native platforms.</p>
-          <p>The existing design had been patched incrementally for years and lacked cohesion. Different screens used different patterns for the same interactions.</p>
-        </section>
-
-        <section class="case-section" id="research">
-          <p class="case-section-label">Research</p>
-          <h2>Session recordings and usability testing pinpointed the exact moments of failure.</h2>
-          <p>I ran five moderated usability sessions with regular customers across different devices and OS versions. Combined with quantitative data, I mapped a clear drop-off funnel — with the address confirmation screen and the payment summary being the two biggest friction points.</p>
-          <div class="case-cols">
-            <div class="case-col">
-              <h3>5 usability sessions</h3>
-              <p>Moderated, across iOS and Android users</p>
-            </div>
-            <div class="case-col">
-              <h3>2 critical drop-off points</h3>
-              <p>Address confirmation and payment summary</p>
-            </div>
-            <div class="case-col">
-              <h3>30%+ abandonment</h3>
-              <p>On mobile vs. 18% on web at time of audit</p>
-            </div>
-          </div>
+          <h2>Checkout is the highest-pressure moment in the entire Shop+Pay flow.</h2>
+          <p>Unlike shopping — where a courier has relative freedom to move at their own pace — checkout is public, time-constrained, and unforgiving. Every unnecessary tap, every moment of confusion, every screen that wasn't immediately clear added friction at exactly the wrong time. We also needed to support pooled orders, meaning a single courier might complete checkout for multiple separate customer orders back to back, compounding that pressure further.</p>
         </section>
 
         <section class="case-section" id="solution">
-          <p class="case-section-label">Solution</p>
-          <h2>A consolidated three-step checkout with fees visible from the start.</h2>
-          <p>The redesign collapsed the previous six-screen flow into three: bag review, delivery details, and payment. Fees were surfaced immediately — no surprises at the payment step. Address entry adopted a map-confirmation pattern familiar from competitor apps, and payment used the platform's native sheet to leverage existing trust.</p>
-          <div class="case-section-img">
-            <img src="images/thumb-2.svg" alt="Checkout redesign screens" />
+          <p class="case-section-label">Regular Checkout</p>
+          <h2>Every step sequenced, every action confirmed, every order accounted for.</h2>
+          <p>A walkthrough of the shipped flow — from the moment a courier approaches the register to the moment they pick up the bags and head to the customer.</p>
+          <div class="case-img-row">
+            <video src="images/Checkout/Regular/Checkout%20Regular.mov?v=2" autoplay loop muted playsinline></video>
+            <img src="images/Checkout/Regular/1%20Shopping%20List.png?v=2" alt="Shopping List" />
+            <img src="images/Checkout/Regular/2%20Shopping%20List.png?v=2" alt="Shopping List" />
+            <img src="images/Checkout/Regular/3%20Checkout%20Order%20Review.png?v=2" alt="Checkout Order Review" />
+            <img src="images/Checkout/Regular/4%20Illustration%20%2B%20Text.png?v=2" alt="Illustration" />
+            <img src="images/Checkout/Regular/5%20Illustration%20%2B%20Text.png?v=2" alt="Illustration" />
+            <img src="images/Checkout/Regular/6%20Illustration%20%2B%20Text.png?v=2" alt="Illustration" />
+            <img src="images/Checkout/Regular/7%20Pay.png?v=2" alt="Pay" />
+            <img src="images/Checkout/Regular/Take%20a%20picture.png?v=2" alt="Take a Picture" />
+            <img src="images/Checkout/Regular/Upload%20Successful.png?v=2" alt="Upload Successful" />
           </div>
-          <p>I ran two rounds of prototype testing before handoff, validating the new flow reduced time-to-order-placed by an average of 40 seconds.</p>
         </section>
 
-        <section class="case-section" id="outcome">
-          <p class="case-section-label">Outcome</p>
-          <h2>Mobile checkout conversion increased by 7 percentage points post-launch.</h2>
-          <p>The redesign shipped in phases with an A/B test running for four weeks across the UK market. The new flow outperformed the control on conversion rate, time-to-complete, and post-order satisfaction. It was rolled out globally over the following quarter.</p>
+        <section class="case-section" id="challenge">
+          <p class="case-section-label">Challenge</p>
+          <h2>Several distinct steps in a specific order — with no room for error.</h2>
+          <p>Checkout required the courier to complete several distinct steps in a specific order: scan a Skip barcode to apply tax adjustments, add any paid bags to the order, pay using their Skip Visa card through their phone's wallet, and bag the items. Each step was non-negotiable — missing any one of them had downstream consequences for the order, the customer, or Skip's financials. The design had to sequence these steps clearly without feeling like a checklist, and keep the courier moving forward with absolute confidence at every moment.</p>
+          <p>Post-launch investigation surfaced a recurring problem: couriers were frequently attempting to purchase items that weren't part of the original order — most commonly rejected substitution items that had been left in the basket. Because the Skip Visa card is pre-loaded with the exact order total, any additional items caused the payment to be declined at the register. This created friction at the worst possible moment and contributed to a measurable increase in failed checkouts.</p>
+          <p>To address this, I introduced an order review screen at the start of the checkout flow. Before reaching the register, couriers are presented with a clear view of what should be in their basket and what needs to be removed. This gave couriers the confidence to catch discrepancies before they became a problem — and directly reduced declined payments as a result.</p>
+          <div class="case-img-row">
+            <img src="images/Checkout/Regular/3%20Checkout%20Order%20Review.png?v=2" alt="Checkout Order Review" />
+            <img src="images/Checkout/Checkout%20Order%20Review%20n%20Scrolled.png?v=2" alt="Checkout Order Review" />
+            <img src="images/Checkout/Pooled/4%20Checkout%20Order%20Review.png?v=2" alt="Checkout Order Review" />
+          </div>
+        </section>
+
+        <section class="case-section" id="pooled">
+          <p class="case-section-label">Pooled Orders</p>
+          <h2>One courier, multiple customers, one register.</h2>
+          <p>Skip supports pooled orders — a courier may arrive at checkout carrying items for more than one customer simultaneously. This introduced a layer of complexity that most checkout experiences never have to account for: how does a courier know which items belong to which order? How does payment work across multiple transactions in a row? The experience needed to handle this gracefully, keeping each order clearly separated without slowing the courier down or creating room for error.</p>
+          <div class="case-img-row">
+            <video src="images/Checkout/Pooled/Pooled%20Vid%20Checkout.mov?v=2" autoplay loop muted playsinline></video>
+            <img src="images/Checkout/Pooled/1%20Shopping%20List.png?v=2" alt="Shopping List" />
+            <img src="images/Checkout/Pooled/2%20Done%20-%20All.png?v=2" alt="Done - All" />
+            <img src="images/Checkout/Pooled/3%20Order%20Preview.png?v=2" alt="Order Preview" />
+            <img src="images/Checkout/Pooled/4%20Checkout%20Order%20Review.png?v=2" alt="Checkout Order Review" />
+            <img src="images/Checkout/Pooled/5%20Order%20Preview.png?v=2" alt="Order Preview" />
+          </div>
+        </section>
+
+        <section class="case-section" id="explorations">
+          <p class="case-section-label">Explorations</p>
+          <h2>Keeping checkout fast — without cutting corners.</h2>
+          <p>I worked closely with data analytics to understand where couriers were spending the most time, where errors were occurring, and which steps were generating support tickets. That data shaped which problems were worth solving and in what order.</p>
+          <p>Cross-functional input was equally critical — Business Operations, Customer Care, and Engineering each brought constraints the design had to account for. The goal throughout was simple: every step needed to be as fast as possible without creating room for error.</p>
+          <blockquote class="case-quote">Speed and accuracy had to coexist in an environment where a courier can't afford to stop and read.</blockquote>
+        </section>
+
+        <section class="case-section" id="results">
+          <p class="case-section-label">Results</p>
+          <h2>800,924 completed orders · $44M GTV · 92% item fill rate.</h2>
+          <div class="case-cols">
+            <div class="case-col">
+              <h3>800,924</h3>
+              <p>Completed orders</p>
+            </div>
+            <div class="case-col">
+              <h3>$44M</h3>
+              <p>Gross transaction value</p>
+            </div>
+            <div class="case-col">
+              <h3>92%</h3>
+              <p>Item fill rate</p>
+            </div>
+            <div class="case-col">
+              <h3>36 min</h3>
+              <p>Avg placement to delivery</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="reflection">
+          <p class="case-section-label">Reflection</p>
+          <h2>The simplest-looking flows are often the hardest ones to get right.</h2>
+          <p>What designing under real operational constraints taught me — and why the simplest-looking flows are often the hardest ones to get right.</p>
         </section>
 
         <div class="project-nav">
-          <a href="project-1.html">← Courier Item Substitutions</a>
-          <a href="project-3.html">Next: Analytics Dashboard →</a>
+          <a href="project-1.html">← Shop+Pay: Substitutions</a>
+          <a href="project-3.html">Next: Shop+Pay: The Courier Shopping Experience →</a>
         </div>
 
       </main>
@@ -150,9 +168,9 @@
 
   <footer>
     <div class="footer-inner">
-      <span class="footer-credit">Designed by Nicole</span>
+      <span class="footer-credit">Designed by Nicole, built with the help of ClaudeCode</span>
       <div class="footer-links">
-        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/nicolepasek/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:hello@example.com">Email</a>
         <a href="about.html">About</a>
       </div>
