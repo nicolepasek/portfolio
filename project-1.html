@@ -6,7 +6,7 @@
   <title>Shop+Pay: Substitutions — Nicole Pasek</title>
   <link rel="stylesheet" href="styles.css?v=14" />
 
-<script>function getCookie(n){var m=document.cookie.match("(^|;)\\s*"+n+"\\s*=\\s*([^;]+)");return m?m.pop():""}if(getCookie("auth")!=="ok"){var p=prompt("Enter password:");if(p==="Blue"){document.cookie="auth=ok;path=/;max-age=86400";location.reload();}else{document.body.innerHTML="<p style=\"text-align:center;margin-top:20vh;font-family:sans-serif\">Incorrect password.</p>";window.stop();}}</script>
+<script>function getCookie(n){var m=document.cookie.match("(^|;)\\s*"+n+"\\s*=\\s*([^;]+)");return m?m.pop():""}function isAuth(){return getCookie("auth")==="ok"||localStorage.getItem("auth")==="ok"||sessionStorage.getItem("auth")==="ok"}if(!isAuth()){var p=prompt("Enter password:");if(p==="Blue"){document.cookie="auth=ok;path=/;max-age=86400";try{localStorage.setItem("auth","ok")}catch(e){}try{sessionStorage.setItem("auth","ok")}catch(e){}}else{document.body.innerHTML="<p style=\"text-align:center;margin-top:20vh;font-family:sans-serif\">Incorrect password.</p>";window.stop();}}</script>
 </head>
 <body>
 
