@@ -1,5 +1,5 @@
 (function () {
-  var PASSWORD = "Blue";
+  var PASSWORD = "blue";
   var COOKIE_NAME = "auth";
   var MAX_AGE = 60 * 60 * 24; // 24 hours
 
