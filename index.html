@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="auth.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nicole Pasek | Product Designer</title>
   <link rel="stylesheet" href="styles.css?v=15" />
-  <script>function getCookie(n){var m=document.cookie.match("(^|;)\\s*"+n+"\\s*=\\s*([^;]+)");return m?m.pop():""}function isAuth(){return getCookie("auth")==="ok"||localStorage.getItem("auth")==="ok"||sessionStorage.getItem("auth")==="ok"}function getNext(){var m=location.search.match(/[?&]next=([^&]+)/);return m?decodeURIComponent(m[1]):null}function goToNext(){var n=getNext();if(n&&n!=="index.html"){window.location.replace(n);}}if(!isAuth()){var p=prompt("Enter password:");if(p==="Blue"){document.cookie="auth=ok;path=/;max-age=86400";try{localStorage.setItem("auth","ok")}catch(e){}try{sessionStorage.setItem("auth","ok")}catch(e){}goToNext();}else{document.body.innerHTML="<p style=\"text-align:center;margin-top:20vh;font-family:sans-serif\">Incorrect password.</p>";window.stop();}}else{goToNext();}</script>
 
 </head>
 <body>
